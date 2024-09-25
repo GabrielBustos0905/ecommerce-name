@@ -1,8 +1,9 @@
+import CarouselTextBanner from "@/components/carousel-text-banner";
 
 export default function Home() {
   return (
     <main>
-      Welcome to Home
+      <CarouselTextBanner />
     </main>
   );
 }
