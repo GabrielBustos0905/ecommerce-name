@@ -4,22 +4,22 @@ import { Separator } from "./ui/separator"
 const dataFooter = [
     {
         id: 1,
-        title: "About Us",
+        title: "Sobre Nosotros",
         link: "#"
     },
     {
         id: 2,
-        title: "Products",
+        title: "Productos",
         link: "#"
     },
     {
         id: 3,
-        title: "Your account",
+        title: "Mi cuenta",
         link: "#"
     },
     {
         id: 4,
-        title: "Privacy Policy",
+        title: "Politicas de privacidad",
         link: "#"
     }
 ]

@@ -14,33 +14,33 @@ import {
 
 export const categories: { title: string; href: string; description: string }[] = [
     {
-        title: "T-Shirts",
+        title: "Remeras",
         href: "/category/remeras",
         description:
-            "Category where you can find all the shirts we have",
+            "Encuentra todas las remeras que ofrecemos",
     },
     {
-        title: "Pants",
+        title: "Pantalones",
         href: "/category/pantalones",
         description:
-            "Category where you can find all the pants we have",
+            "Encuentra todas los pantalones que ofrecemos",
     },
     {
-        title: "Shirts",
-        href: "/category/shirts",
+        title: "Camisas",
+        href: "/category/camisas",
         description:
-            "Category where you can find all the shirts we have",
+            "Encuentra todas las camisas que ofrecemos",
     },
     {
-        title: "Accessories",
-        href: "/category/accessories",
-        description: "Category where you can find all the accessories we have",
+        title: "Accesorios",
+        href: "/category/accesorios",
+        description: "Encuentra todas los accesorios que ofrecemos",
     },
     {
-        title: "Coats",
-        href: "/category/coats",
+        title: "Abrigos",
+        href: "/category/abrigos",
         description:
-            "Category where you can find all the coats we have",
+            "Encuentra todas los abrigos que ofrecemos",
     }
 ]
 
@@ -49,7 +49,7 @@ export function MenuList() {
         <NavigationMenu>
             <NavigationMenuList>
                 <NavigationMenuItem>
-                    <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
+                    <NavigationMenuTrigger>Sobre Nosotros</NavigationMenuTrigger>
                     <NavigationMenuContent>
                         <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                             <li className="row-span-3">
@@ -67,16 +67,16 @@ export function MenuList() {
                                 </NavigationMenuLink>
                             </li>
                             <ListItem href="/shop" title="Shop">
-                                Access all your information, your orders, and much more.
+                                Accede a toda tu iformacion, tus pedidos y mucho mas.
                             </ListItem>
-                            <ListItem href="/offers" title="Offers">
-                                Section dedicated to promotions and special discounts.
+                            <ListItem href="/ofertas" title="Ofertas">
+                                Seccion dedicada a promociones y descuentos especiales.
                             </ListItem>
                         </ul>
                     </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                    <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+                    <NavigationMenuTrigger>Productos</NavigationMenuTrigger>
                     <NavigationMenuContent>
                         <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                             {categories.map((component) => (
