@@ -12,7 +12,7 @@ import { useRouter } from "next/navigation"
 import { IconButton } from "./icon-button"
 
 export default function FeaturedProducts() {
-    const { result, error, loading }: ResponseTypes = useGetFeaturedProducts()
+    const { result, loading }: ResponseTypes = useGetFeaturedProducts()
     const router = useRouter()
 
     return (
@@ -28,7 +28,7 @@ export default function FeaturedProducts() {
                     {
                         result !== null && (
                             result.map((product: ProductType) => {
-                                const { id, images, slug, productName, sizes, brand } = product
+                                const { id, images, slug, productName, brand } = product
                                 console.log(images)
                                 return (
                                     <CarouselItem key={id} className="md:basis-1/2 lg:basis-1/3 group">
@@ -38,6 +38,7 @@ export default function FeaturedProducts() {
                                                     <img
                                                         src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${product.images[0].url}`}
                                                         alt="Image featured"
+                                                        className="h-60"
                                                     />
                                                     <div className="absolute w-full px-6 transition duration-200 opacity-0 group-hover:opacity-100 bottom-5">
                                                         <div className="flex justify-center gap-x-6">
@@ -58,9 +59,6 @@ export default function FeaturedProducts() {
                                                     <h3 className="text-lg font-bold">{productName}</h3>
                                                     <div className="flex items-center justify-between gap-3">
                                                         <p className="px-2 py-1 text-white capitalize bg-black rounded-full dark:bg-secondary w-fit text-xs">{brand}</p>
-                                                        {
-                                                            sizes.map(size => (<p className="text-xs" key={size.id}>{size.sizeName}</p>))
-                                                        }
                                                     </div>
                                                 </div>
                                             </Card>
