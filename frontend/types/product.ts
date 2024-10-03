@@ -1,3 +1,9 @@
+export type ResponseProduct = {
+    result: ProductType[];
+    loading: boolean,
+    error: string
+} 
+
 export type ProductType = {
     id:          number;
     documentId:  string;
