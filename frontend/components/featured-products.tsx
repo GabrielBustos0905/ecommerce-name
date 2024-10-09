@@ -17,7 +17,7 @@ export default function FeaturedProducts() {
     const router = useRouter()
     const { addItem, items } = useCart()
 
-    console.log(items)
+    console.log("Favoritos: ", items)
 
     return (
         <div className="max-w-6xl py-4 mx-auto sm:py-16 sm:px-24">
